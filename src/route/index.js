@@ -350,6 +350,7 @@ router.get('/person', function (req, res) {
                                   title:
                                     'Software Engineer',
                                 },
+
                                 {
                                   name: 'Cindy Chen',
                                   title: 'UI Designer',
