@@ -1,0 +1,131 @@
+<div>
+    <div>
+        <div>
+            <h1>{{name}}</h1>
+        </div>
+        <br />
+        <div> Birthdate: {{birthdate}}</div>
+        <br />
+        <div>Birthplace: {{birthplace}}</div>
+        <br />
+        <div>Deathdate: {{deathdate}}</div>
+        <br />
+        <div>Deathplace: {{deathplace}}</div>
+        <br />
+        <div> Nationality: {{nationality}} </div>
+        <br />
+        <div> Occupation: {{occupation}}</div>
+        <br />
+        <div>
+            {{> title data="Known for:"}}
+
+            <ul>
+                {{#each known_for}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            {{#each education}}
+
+            {{> title data="Education"}}
+
+            <div> Degree: {{degree}}</div>
+            <div> Field: {{field}}</div>
+            <div> Institution: {{institution}}</div>
+            <div> Year: {{year}}</div>
+            {{/each}}
+        </div>
+        <div>
+            {{> title data="Notable publications"}}
+            <uL>
+                {{#each notable_publications}}
+                <li>
+                    <p>"{{title}}", {{year}}, ({{publisher}})</p>
+
+                </li>
+                {{/each}}
+            </uL>
+        </div>
+
+        <div>
+            {{> title data="Partners"}}
+            <uL>
+                {{#each partners}}
+                <li>
+                    <p><b>{{name}}</b>, {{relationship}}, ({{years}})</p>
+                </li>
+                {{/each}}
+            </uL>
+        </div>
+
+        <div>
+            {{> title data="Awards"}}
+            <uL>
+                {{#each awards}}
+                <li>
+                    <p>"{{title}}", ({{year}}), {{description}}</p>
+                </li>
+                {{/each}}
+            </uL>
+        </div>
+
+        <div>
+            {{> title data="Influences:"}}
+
+            <ul>
+                {{#each influences}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div>
+            {{> title data="Influenced:"}}
+
+            <ul>
+                {{#each influenced}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div>
+            {{> title data="Quotes:"}}
+
+            <ul>
+                {{#each quotes}}
+                <li>
+                    </p><em>"{{this}}"</em></p>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div>
+            {{> title data="Major discoveries"}}
+            <uL>
+                {{#each major_discoveries}}
+                <li>
+                    <p>"{{title}}", ({{year}})</p>
+                    <p>{{description}}</p>
+                </li>
+                {{/each}}
+            </uL>
+        </div>
+        <div>
+            {{> title data="Contributions"}}
+
+            <div>
+                <p>
+                    Title: {{contributions.title}}<br />
+                    Description: {{contributions.description}} <br />
+                    Year: {{contributions.year}}<br />
+                    Field: {{contributions.field}}
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
