@@ -1,0 +1,87 @@
+<div>
+    <h1>{{name}}</h1>
+</div>
+
+{{#each users}}
+<h2>Users</h2>
+<main>
+    <div>
+        ID:{{id}}<br />
+        Name:<b>{{name}},</b>, {{gender}}, age:{{age}}<br />
+        <b>Friends:</b>
+        {{#each friends}}
+        <ul>
+            <div>
+                ID:{{id}}<br />
+                Name:<b>{{name}},</b>, {{gender}}, age:{{age}}<br />
+                <b>Mutual friends:</b>
+
+                {{#each mutual_friends}}
+                <ul>
+                    <div>
+                        ID:{{id}}
+                        Name:<b>{{name}},</b>, {{gender}}, age:{{age}}
+                    </div>
+
+                    {{#each mutual_friends}}
+                    <ul>
+                        ID:{{id}}
+                        Name:<b>{{name}},</b>, {{gender}}, age:{{age}}
+                    </ul>
+                    {{/each}}
+                </ul>
+                {{/each}}
+            </div>
+
+        </ul>
+
+        {{#each groups}}
+
+        <div>
+            <ul>
+                <b>Groups:</b>
+                <ul>
+                    ID:{{id}}<br />
+                    Name: {{name}}<br />
+                    <em>{{description}}</em>
+                    {{#each members}}
+
+                    <div>
+                        <b>Members:</b>
+                        <ul>
+                            ID:{{id}}
+                            Name:<b>{{name}},</b>, {{gender}}, age:{{age}}
+                        </ul>
+
+                    </div>
+                    {{/each}}
+                </ul>
+            </ul>
+
+        </div>
+        {{/each}}
+
+        {{/each}}
+    </div>
+    <div>
+        {{#each groups}}
+        <b>Groups:</b>
+        <ul>
+            ID:{{id}}<br />
+            Name: {{name}}<br />
+            <em>{{description}}</em>
+            {{#each members}}
+            <div>
+                <b>Members:</b>
+                <ul>
+                    ID:{{id}}
+                    Name:<b>{{name}},</b>, {{gender}}, age:{{age}}
+                </ul>
+            </div>
+            {{/each}}
+        </ul>
+        {{/each}}
+    </div>
+
+</main>
+{{/each}}
