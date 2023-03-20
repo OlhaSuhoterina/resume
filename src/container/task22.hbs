@@ -1,0 +1,108 @@
+<div>
+    <main>
+        <header>
+            {{#with page_header}}
+            <h1 class="text-center">{{title}}</h1> <br />
+            <p class="text-uppercase text-center">{{description}}</p>
+            {{/with}}
+        </header>
+        <section>
+            {{#with section }}
+            <div class="card">
+                {{#with about_us}}
+                <div class="card-body">
+                    {{#with title_list}}
+                    <p class="display-6 text-end text-dark">{{main}}</p>
+                    <h2 class="text-end text-dark">{{sub}}</h2>
+                    {{/with}}
+                </div>
+                <div class="card-body">
+                    <button type="button" class="btn btn-outline-info">Info</button>
+                </div>
+                {{/with}}
+            </div>
+            <br />
+
+            <div class="card">
+                {{#with advantage}}
+                <p class="card-body display-5 text-muted">{{title}}</p>
+                <div class="card">
+                    {{#with efficiency}}
+                    <div class="card-body">
+                        <p class="display-4 text-muted">{{title}}</p>
+                        <h6 class=" text-muted">{{sub_title}}</h6>
+
+                        <p>{{description}}</p>
+                        <button type="button" class="btn btn-outline-warning">{{button}}</button>
+                    </div>
+                    {{/with}}
+                </div>
+                <br />
+                <div class="card">
+                    {{#with innovation}}
+                    <div class="card-body">
+                        <div class="display-4 text-muted text-center">
+                            {{title}}
+                        </div>
+                        <div>
+                            <h6 class="text-center">{{sub_title}}</h6>
+                        </div>
+                        <div>
+                            <p class="text-center">{{description}}</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-warning">{{button}}</button>
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+                <br />
+                <div class="card">
+                    {{#with collaboration}}
+                    <div class="card-body">
+                        <div class="display-4 text-muted text-end">
+                            {{title}}
+                        </div>
+                        <div>
+                            <h6 class="text-end">{{sub_title}}</h6>
+                        </div>
+                        <div>
+                            <p class="text-end">{{description}}</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-warning">{{button}}</button>
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+            <br />
+            <div class="card">
+                {{#with agreement}}
+                <div class="card-bady display-5">
+                    {{title}}
+                </div>
+                <br />
+                <div class="card">
+                    {{#with info}}
+                    <div class="card-body">
+                        <h5>{{sub_title}}</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                {{#with detail}}
+                                <p>{{text}}</p>
+                                <button type="button" class="btn btn-success">{{button}}</button>
+                                {{/with}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/with}}
+            </div>
+            {{/with}}
+</div>
+{{/with}}
+</section>
+</main>
+</div>
