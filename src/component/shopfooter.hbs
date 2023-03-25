@@ -1,0 +1,14 @@
+<div class="row row-cols-5 row-cols-md-5 g-1 ">
+    {{#each footer}}
+    <div class="">
+        <div class="nav">
+            <div>
+                <a class="nav-link active" aria-current="page" href="#">{{[0].text}}</a>
+                <a class="nav-link" href="#">{{[1].text}}</a>
+                <a class="nav-link" href="#">{{[2].text}}</a>
+                <a class="nav-link disabled">{{[3].text}}</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
