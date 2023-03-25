@@ -1,0 +1,29 @@
+<section class="p-2">
+    {{#with navigation}}
+    <div class="card">
+        <div class="row col-12 ">
+            <div class="col-4">
+                <div>
+                    <span class="display-6 "><b>{{Logo}}</b></span>
+                </div>
+            </div>
+            <div class="col-8">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">{{links.[0].text}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{links.[1].text}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{links.[2].text}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+</section>

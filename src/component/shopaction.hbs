@@ -1,0 +1,15 @@
+<div class="p-2">
+    {{#with service}}
+    <div class="card text-center text-bg-success">
+        <div class="card-body">
+            <p class="card-title display-5">{{title}}</p>
+            <p class="card-text">{{description}}</p>
+            <div>
+                {{#each buttons}}
+                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/with}}
+</div>
