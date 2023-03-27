@@ -1,11 +1,15 @@
-<div class="col-4 g-3">
-    <div class="card h-100">
-        <img src="{{image}}" class="card-img-top" alt="photo">
-        <div class="card-body">
-            <h6 class="card-title">{{title}} </h6>
-            {{#if isHot}}<span class="badge text-bg-warning rounded-pill">HOT!</span>{{/if}}
-            {{#if idNew}}<span class="badge text-bg-success rounded-pill">New</span>{{/if}}
-            <p class="card-text">{{description}}</p>
+<div class="row">
+    {{#each cards}}
+    <div class="col-4 g-3">
+        <div class="card h-100">
+            <img src="{{image}}" class="card-img-top" alt="photo">
+            <div class="card-body">
+                <h6 class="card-title">{{title}} </h6>
+                {{#if isHot}}<span class="badge text-bg-warning rounded-pill">HOT!</span>{{/if}}
+                {{#if idNew}}<span class="badge text-bg-success rounded-pill">New</span>{{/if}}
+                <p class="card-text">{{description}}</p>
+            </div>
         </div>
     </div>
+    {{/each}}
 </div>
