@@ -6,40 +6,50 @@
 <div>
     {{#with main}}
     <main>
-        <section>
-            {{> title data="All Skills" big=true}}
+        <div class="col-12">
+            <div class="row">
+                <div class="col-5 p-1 m-1">
+                    <div class="card ">
+                        <div class="card-title text-center">
+                            {{> title data="All Skills" big=true}}
+                        </div>
 
-            <ul>
-                {{#each skills}}
-                <li>
-                    {{name}}
-                    {{#if point includeZero=true}} ({{point}}){{/if}}
-                    {{#if isTop}}(TOP!!!TOP){{/if}}
-                    {{#unless point}}
-                    {{#if point includeZero=true}} Ще вивчємо {{/if}}
-                    {{/unless}}
-                    {{#unless point includeZero=true}} Не вивчали {{/unless}}
-                </li>
-                {{/each}}
-            </ul>
+                        <ul>
+                            {{#each skills}}
+                            <li>
+                                {{name}}
+                                {{#if point includeZero=true}} ({{point}}){{/if}}
 
-        </section>
-        <section>
-            {{> title data="My hobbies" big=false}}
+                                {{#unless point}}
+                                {{#if point includeZero=true}} Ще вивчємо {{/if}}
+                                {{/unless}}
+                                {{#unless point includeZero=true}} Не вивчали {{/unless}}
 
-            {{#each hobbies}}
-            <li>
-                {{name}}
-
-                {{#if isMain}}(favourite){{/if}}
-
-            </li>
-            {{/each}}
-
-        </section>
+                                {{#if isTop}}<span class="badge bg-success">TOP</span>{{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-5 p-1 m-1">
+                    <div class="card ">
+                        <div class="card-title text-center">
+                            {{> title data="My hobbies" big=false}}
+                        </div>
+                        <div class="card-body">
+                            {{#each hobbies}}
+                            <li>
+                                {{name}}
+                                {{#if isMain}}<span class="badge bg-danger">TOP</span>{{/if}}
+                            </li>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     {{/with}}
-
 </div>
 
 {{!--

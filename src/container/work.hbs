@@ -20,12 +20,8 @@
                         </div>
                         <br />
                         <div>
-                            {{#if company.url}}
-                            {{> link text=company.name href=company.url blank=true noLane=true}}
-                            {{else}}
-                            <b>{{company.name }}</b>
-                            {{/if}}
-
+                            <button type="button" class="btn btn-primary "
+                                onclick="window.location.href=`{{company.url}}`">{{company.name}}</button>
                         </div>
                         <br />
                         <div>

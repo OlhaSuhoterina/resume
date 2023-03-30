@@ -1,11 +1,48 @@
-{{!-- 
-Це код container файлу для index сторінки, 
+{{!--
+Це код container файлу для index сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- --}}
-
-<h1>Hello world</h1>
-
-{{!-- 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
 --}}
+
+<div class="col-12 p-2">
+    <div class="row p-2">
+        <h2>Blok Resume</h2>
+        <a href="/summary" target="_blank" class="btn btn-primary col-2 m-2">Summary</a>
+        <a href="/skills" target="_blank" class="btn btn-primary col-2 m-2">Skills</a>
+        <a href="/education" target="_blank" class="btn btn-primary col-2 m-2">Education</a>
+        <a href="/work" target="_blank" class="btn btn-primary col-2 m-2">Work</a>
+    </div>
+</div>
+<br />
+<hr>
+<div class="col-12 p-2">
+    <div class="row p-2">
+        <h2>Blok practice HTML</h2>
+        <a href="/person" target="_blank" class="btn btn-outline-primary col-2 m-2">Person</a>
+        <a href="/bio" target="_blank" class="btn btn-outline-primary col-2 m-2">Bio</a>
+        <a href="/program" target="_blank" class="btn btn-outline-primary col-2 m-2">Program</a>
+        <a href="/web" target="_blank" class="btn btn-outline-primary col-2 m-2">web</a>
+    </div>
+</div>
+<br />
+<hr>
+<div class="col-12 p-2">
+    <div class="row p-2">
+        <h2>Blok Shop</h2>
+        <a href="/shopcart" target="_blank" class="btn btn-info col-4 m-2">ShopCart</a>
+        <a href="/shopcatalog" target="_blank" class="btn btn-info col-4 m-2">ShopCatalog</a>
+        <a href="/shophome" target="_blank" class="btn btn-info col-4 m-2">ShopHome</a>
+        <a href="/shopnews" target="_blank" class="btn btn-info col-4 m-2">ShopNews</a>
+        <a href="/shoporder" target="_blank" class="btn btn-info col-4 m-2">ShopOrder</a>
+        <a href="/shopproduct" target="_blank" class="btn btn-info col-4 m-2">ShopProduct</a>
+        <a href="/shopprofile" target="_blank" class="btn btn-info col-4 m-2">ShopProfile</a>
+        <a href="/shopreview" target="_blank" class="btn btn-info col-4 m-2">ShopReview</a>
+    </div>
+</div>
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в
+
+<body>
+    Адже наш layout/default.hbs має вже структуру HTML
+    --}}
