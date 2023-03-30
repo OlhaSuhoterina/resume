@@ -6,27 +6,28 @@
 <div>
     {{#with main}}
     <main>
-        <section>
 
-            {{> title data=summary.title big=true}}
-
-            <div>
-                <p>
-                    {{summary.text}}
-                </p>
+        <div class="card p-2">
+            <div class="card-body">
+                <div class="card-title">
+                    {{> title data=summary.title big=true}}
+                </div>
+                <p class="card-text"> {{summary.text}} </p>
             </div>
-        </section>
+        </div>
+        <br />
 
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">
+                    {{> title data=experience.title big=false}}
+                </div>
+                <div class="card-text">
+                    <p>{{experience.text}}</p>
+                </div>
+            </div>
 
-        <section>
-            <div>
-                {{> title data=experience.title big=false}}
-            </div>
-            <div>
-                <p>
-                    {{experience.text}}
-            </div>
-        </section>
+        </div>
 
     </main>
     {{/with}}
